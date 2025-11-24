@@ -25,8 +25,7 @@ body{
     background-attachment: fixed;
     background-color: var(--Blue-950);
     background-size: 100%;
-    display: flex;
-    justify-content: center;
+    display: flex; 
     align-items: center; 
 }
 
@@ -58,4 +57,76 @@ body{
     display: flex;
     justify-content: center;
     align-items: center; 
+}
+
+
+.storage{ 
+    min-width: 340px;
+    flex-grow: 2;
+    background-color: var(--Blue-850);
+    color: var(--Grayish-Blue);
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 3em;
+    border-radius: 1em;
+}
+
+p span{
+    color: var(--Blue-200);
+}
+
+.span{
+    display: flex; 
+    justify-content: space-between;
+    color: var(--Blue-200);
+    margin-top: -0.3em;
+}
+ 
+meter {  
+  width:max(100%,300px);
+  height: 30px;
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none;
+  background-color:var(--Blue-950); 
+  border-radius:15px;
+}
+  
+meter::-webkit-meter-bar {   
+  width:max(98% ,290px);
+  height:20px;
+  margin-left:5px;
+  background: none; 
+  background-color:var(--Blue-950); 
+}
+
+meter::-webkit-meter-optimum-value { 
+  border-radius:10px;
+  background-image: linear-gradient(
+    90deg, var(--Gradient-from),
+    var(--Gradient-to)
+  );
+  background-size: 100% 100%;
+}
+
+.div-meter{
+    position: relative;
+}
+
+.meter{
+    width: 100%;
+    display: block;
+}
+
+.meter::after{
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-color: var(--Blue-200);
+    border-radius: 50%;
+    top: 7px;
+    right: 20%;
 }
