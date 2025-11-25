@@ -43,8 +43,7 @@ body{
     border-radius: 1em 6em 1em 1em ; 
     margin-right: 3em;
     display: flex;
-    flex-direction: column;
-    /* min-width: 450px; */
+    flex-direction: column; 
     flex-basis: 450px;
 }
 
@@ -74,6 +73,7 @@ body{
 
 
 .storage{ 
+    font-size: 1.2rem;
     position: relative;
     flex-basis: 400px;
     flex-grow: 2;
@@ -89,6 +89,7 @@ body{
 
 p span{
     color: var(--Blue-200);
+    font-weight: 700;
 }
 
 .span{
@@ -109,7 +110,7 @@ meter {
 }
   
 meter::-webkit-meter-bar {   
-  width:97%;
+  width:98%;
   height:20px;
   margin-left:5px;
   background: none; 
@@ -142,13 +143,13 @@ meter::-webkit-meter-optimum-value {
     position: absolute;
     background-color: var(--Blue-200);
     border-radius: 50%;
-    top: 6px;
-    right: 20.5%;
+    top: 7px;
+    right: 20%;
 }
 
 .parent{ 
     position: absolute;
-    top: -5em;
+    top: -3em;
     right: 42px;
 }
 
@@ -183,4 +184,51 @@ meter::-webkit-meter-optimum-value {
     border-width: 1.3em;
     border-right-color: var(--Blue-200);
     border-top-color: var(--Blue-200);
+}
+
+@media screen and (max-width:1024px) {
+    .container{
+        display: block;
+        margin-top:15em;
+        margin-bottom:15em;
+    }
+
+    .storage{
+        align-self: auto;
+        margin-top: 6em;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .container{
+        min-width: 350px;
+        width: 90%;
+    }
+
+    .images{ 
+        width: 100%;
+    }
+
+    .icons{
+        gap: 1rem;
+    }
+
+    .storage{ 
+        margin-top: 2em;
+    }
+
+    .parent{  
+        top: 10em;
+        right: 30%;
+    }
+
+    .message{
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .message::after {
+        display: none;
+    }
 }
