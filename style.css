@@ -203,7 +203,7 @@ meter:-moz-meter-optimum::-moz-meter-bar{
     border-top-color: var(--Blue-200);
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:64rem) {
     .container{
         display: block;
         margin-top:15em;
@@ -217,7 +217,10 @@ meter:-moz-meter-optimum::-moz-meter-bar{
 }
 
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:48rem) {
+    body{
+        background-image: url(./images/bg-mobile.png);
+    }
     .container{
         min-width: 350px;
         width: 90%;
